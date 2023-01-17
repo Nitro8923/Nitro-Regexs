@@ -11,8 +11,9 @@ def main():
     # https://github.com/pwaller/pyfiglet
     figlet = Figlet(font='big')
     while True:
-        print(figlet.renderText(""))
-        print("Menu: \nActions: \n    [1] Save New Regex\n    [2] Delete Regexs\n    [3] Test Regexs\n    [4] Change File\n    [5] Quit")
+        figlet = Figlet(font='big')
+        print(figlet.renderText("Menu"), end="")
+        print("    [1] Save New Regex\n    [2] Delete Regexs\n    [3] Test Regexs\n    [4] Change File\n    [5] Quit")
         
         with open("file.txt", "r") as file:
             FILE = file.readline()
@@ -35,6 +36,8 @@ def main():
 
 def save():
     print_space()
+    figlet = Figlet(font='big')
+    print(figlet.renderText("Save"), end="")
     print("You are in the Save Function.\nType quit() at anytime to go back to the menu.\nType add() to add a Regex.\n")
     print_re()
     while True:
@@ -62,6 +65,8 @@ def save():
 
 def delete():
     print_space()
+    figlet = Figlet(font='big')
+    print(figlet.renderText("Delete"), end="")
     print("You are in the Delete Function.\nType quit() at anytime to go back to the menu.\nType delete() to delete a Regex.\nType delete_all() to delete all Regexs\n")
     print_re()
     while True:
@@ -107,6 +112,8 @@ def delete():
 
 def test():
     print_space()
+    figlet = Figlet(font='big')
+    print(figlet.renderText("Test"), end="")
     print("You are in the Test Function.\nType quit() at anytime to go back to the menu.\nType test() to test a Regex.\n")
     print_re()
     while True:
@@ -149,6 +156,8 @@ def test():
 
 def change():
     print_space()
+    figlet = Figlet(font='big')
+    print(figlet.renderText("Change File"), end="")
     # https://www.simplilearn.com/tutorials/python-tutorial/global-variable-in-python#:~:text=Use%20a%20global%20keyword%20to%20change%20the%20value,global%20variable%20inside%20the%20function.
     global FILE 
     while True:
