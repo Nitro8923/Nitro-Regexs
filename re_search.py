@@ -1,11 +1,17 @@
 import re
 import exit
 import os
+from pyfiglet import Figlet
 
 def main():
     print_space()
+    # https://www.w3schools.com/python/python_variables_global.asp
     global FILE
+    global figlet
+    # https://github.com/pwaller/pyfiglet
+    figlet = Figlet(font='big')
     while True:
+        print(figlet.renderText(""))
         print("Menu: \nActions: \n    [1] Save New Regex\n    [2] Delete Regexs\n    [3] Test Regexs\n    [4] Change File\n    [5] Quit")
         
         with open("file.txt", "r") as file:
