@@ -2,6 +2,7 @@ import re
 import exit
 import os
 from pyfiglet import Figlet
+import sys
 
 def main():
     print_space()
@@ -13,7 +14,9 @@ def main():
     while True:
         figlet = Figlet(font='big')
         print(figlet.renderText("Menu"), end="")
+        print("Right now the re.search(regex) section, or the testing section is not working and I am too lazy to fix it so, uhhhh, wait for a couple of years. Bye!")
         print("    [1] Save New Regex\n    [2] Delete Regexs\n    [3] Test Regexs\n    [4] Change File\n    [5] Quit")
+        sys.exit(0)
         
         with open("file.txt", "r") as file:
             FILE = file.readline()
