@@ -15,8 +15,8 @@ def main():
     while True:
         figlet = Figlet(font='big')
         print(figlet.renderText("Menu"), end="")
-        print("    [1] Save New Regex\n    [2] Delete Regexs\n    [3] Test Regexs\n    [4] Change File\n    [5] Quit")
-        with open("file.txt", "r") as file:
+        print("    [1] Save New Regex\n    [2] Delete Regexs\n    [3] Test Regexs\n    [4] Change File\n    [5] Help\n    [6] Quit")
+        with open("regex_data/regex_path.txt", "r") as file:
             FILE = file.readline()
         if test_file() == False:
             exit.exit(f"{FILE} doesn't exists", 1)
@@ -166,7 +166,7 @@ def change():
         FILE = input("Path to new file: ")
         if test_file():
             break
-    with open("re_path.txt", "w") as file:
+    with open("regex_data/regex_path.txt", "w") as file:
         file.write(FILE)
     print_space()
 
