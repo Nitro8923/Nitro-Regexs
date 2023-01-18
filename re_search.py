@@ -135,7 +135,6 @@ def test():
 
                 # Src: https://stackoverflow.com/questions/6930982/how-to-use-a-variable-inside-a-regular-expression
                 re_string = lines[int(re_index)].replace("\n", "")
-                re_string = r"{}".format(re_string)
                 
                 while True:
                     print(f"Your current Regex: {re_string}")
@@ -143,14 +142,14 @@ def test():
                     if value == "quit()":
                         break
                     try:
-                        if re.search(f"{re_string}", value):
+                        if re.search(r"{}".format(re_string), value):
                             print("True")
                         else:
                             print("False")
                     except:
                         print("There was a problem")
                         break
-            
+                print_re()
             print("Regex tested successfully")
             print_re()
         elif value == "quit()":
