@@ -2,7 +2,6 @@ import re
 import exit
 import os
 import help_file
-import sys
 from pyfiglet import Figlet
 import sys
 
