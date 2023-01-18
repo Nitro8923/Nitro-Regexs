@@ -1,6 +1,8 @@
 import re
 import exit
 import os
+import help_file
+import sys
 from pyfiglet import Figlet
 
 def main():
@@ -13,9 +15,8 @@ def main():
     while True:
         figlet = Figlet(font='big')
         print(figlet.renderText("Menu"), end="")
-        print("    [1] Save New Regex\n    [2] Delete Regexs\n    [3] Test Regexs\n    [4] Change File\n    [5] Quit")
-        
-        with open("file.txt", "r") as file:
+        print("    [1] Save New Regex\n    [2] Delete Regexs\n    [3] Test Regexs\n    [4] Change File\n    [5] Help\n    [6] Quit")
+        with open("re_path.txt", "r") as file:
             FILE = file.readline()
         if test_file() == False:
             exit.exit(f"{FILE} doesn't exists", 1)
@@ -28,6 +29,8 @@ def main():
             test()
         elif value == "4":
             change()
+        elif value == "5":
+            help()
             
 
         else:
@@ -132,7 +135,6 @@ def test():
 
                 # Src: https://stackoverflow.com/questions/6930982/how-to-use-a-variable-inside-a-regular-expression
                 re_string = lines[int(re_index)].replace("\n", "")
-                re_string = r"{}".format(re_string)
                 
                 while True:
                     print(f"Your current Regex: {re_string}")
@@ -140,14 +142,14 @@ def test():
                     if value == "quit()":
                         break
                     try:
-                        if re.search(f"{re_string}", value):
+                        if re.search(r"{}".format(re_string), value):
                             print("True")
                         else:
                             print("False")
                     except:
                         print("There was a problem")
                         break
-            
+                print_re()
             print("Regex tested successfully")
             print_re()
         elif value == "quit()":
@@ -164,8 +166,22 @@ def change():
         FILE = input("Path to new file: ")
         if test_file():
             break
-    with open("file.txt", "w") as file:
+    with open("re_path.txt", "w") as file:
         file.write(FILE)
+    print_space()
+
+def help():
+    print_space()
+    figlet = Figlet(font="big")
+    print(figlet.renderText("Help"), end="")
+    print("\n" * 20)
+    with open(help_file.get_latest_help_file(), "r") as help_file_txt:
+        print(help_file_txt.read())
+    
+    
+    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScroll up to the top")
+    print("Press enter at anytime to exit")
+    input()
     print_space()
 
 def print_re():
@@ -184,6 +200,9 @@ def print_re():
 def test_file():
     if not os.path.exists(FILE):
         return False
+    list = []
+    with open(FILE, "r") as file:
+        list.append(file.read())
     return True
     
 
