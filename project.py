@@ -23,7 +23,8 @@ def main():
         
         if test_file(regex_file) == False:
             exit.exit(f"{regex_file} doesn't exists", 1)
-        value = input("$ ")
+        print("$ ", end="")
+        value = input()
         if value == "1":
             save(regex_file)
         elif value == "2":
@@ -45,18 +46,25 @@ def save(regex_file):
     print("You are in the Save Function.\nType quit() at anytime to go back to the menu.\nType add() to add a Regex.\n")
     print_re(regex_file)
     while True:
-        value = input("$ ")
+        print("$ ", end="")
+        value = input()
         if value == "add()":
             while True:
-                new_re = input("Regex: ")
+                print("Regex: ", end="")
+                new_re = input()
                 if new_re == "quit()":
+                    break1 = True
                     break
                 while True:
-                    confirmation = input("Are you sure you want to add this Regex? y/n: ")
+                    print("Are you sure you want to add this Regex? y/n: ", end="")
+                    confirmation = input()
                     if confirmation.lower() == "y" or confirmation.lower() == "n":
                         break
                 if confirmation.lower() == "y":
                     break
+            if break1 == True:
+                break1 = False
+                break
             
             with open(regex_file, "a") as file:
                 file.write(f"{new_re}\n")
@@ -74,16 +82,19 @@ def delete(regex_file):
     print("You are in the Delete Function.\nType quit() at anytime to go back to the menu.\nType delete() to delete a Regex.\nType delete_all() to delete all Regexs\n")
     print_re(regex_file)
     while True:
-        value = input("$ ")
+        print("$ ", end="")
+        value = input()
         if value == "delete()":
             while True:
-                re_index = input("Regex index: ")
+                print("Regex index: ", end="")
+                re_index = input()
                 if re_index == "quit()":
                     break
                 if not re_index.isdigit():
                     continue
                 while True:
-                    confirmation = input("Are you sure you want to delete this Regex? y/n: ")
+                    print("Are you sure you want to delete this Regex? y/n: ", end="")
+                    confirmation = input()
                     if confirmation.lower() == "y" or confirmation.lower() == "n":
                         break
                 if confirmation.lower() == "y":
@@ -103,7 +114,8 @@ def delete(regex_file):
             print_re(regex_file)
         elif value == "delete_all()":
             while True:
-                confirmation = input("Are you sure you want to delete all Regexs? y/n: ")
+                print("Are you sure you want to delete all Regexs? y/n: ", end="")
+                confirmation = input()
                 if confirmation.lower() == "y" or confirmation.lower() == "n":
                     break
             if confirmation.lower() == "y":
@@ -121,10 +133,12 @@ def test(regex_file):
     print("You are in the Test Function.\nType quit() at anytime to go back to the menu.\nType test() to test a Regex.\n")
     print_re(regex_file)
     while True:
-        value = input("$ ")
+        print("$ ", end="")
+        value = input()
         if value == "test()":
             while True:
-                re_index = input("Regex index: ")
+                print("Regex index: ", end="")
+                re_index = input()
                 if re_index == "quit()":
                     break
                 if not re_index.isdigit():
@@ -139,7 +153,8 @@ def test(regex_file):
                 
                 while True:
                     print(f"Your current Regex: {re_string}")
-                    value = input("Input: ")
+                    print("Input: ", end="")
+                    value = input()
                     if value == "quit()":
                         break
                     try:
@@ -163,7 +178,8 @@ def change(regex_file):
     print(figlet.renderText("Change File"), end="")
     # https://www.simplilearn.com/tutorials/python-tutorial/global-variable-in-python#:~:text=Use%20a%20global%20keyword%20to%20change%20the%20value,global%20variable%20inside%20the%20function.
     while True:
-        regex_file = input("Path to new file: ")
+        print("Path to new file", end="")
+        regex_file = input()
         if test_file(regex_file):
             break
     with open("regex_data/regex_path.txt", "w") as file:
