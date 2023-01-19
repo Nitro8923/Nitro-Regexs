@@ -61,16 +61,12 @@ def save(regex_file):
                     if confirmation.lower() == "y" or confirmation.lower() == "n":
                         break
                 if confirmation.lower() == "y":
+                    with open(regex_file, "a") as file:
+                        file.write(f"{new_re}\n")
+                    
+                    print("Regex added successfully")
+                    print_re(regex_file)
                     break
-            if break1 == True:
-                break1 = False
-                break
-            
-            with open(regex_file, "a") as file:
-                file.write(f"{new_re}\n")
-            
-            print("Regex added successfully")
-            print_re(regex_file)
         elif value == "quit()":
             break 
     print_space()
@@ -98,20 +94,21 @@ def delete(regex_file):
                     if confirmation.lower() == "y" or confirmation.lower() == "n":
                         break
                 if confirmation.lower() == "y":
+                    lines = []
+                    with open(regex_file, 'r') as file:
+                        lines = file.readlines()
+
+                    # Src: https://pynative.com/python-delete-lines-from-file/
+                    with open(regex_file, 'w') as file:
+                        for number, line in enumerate(lines):
+                            if number not in [int(re_index)]:
+                                file.write(line)
+                    
+                    print("Regex deleted successfully")
+                    print_re(regex_file)
                     break
             
-            lines = []
-            with open(regex_file, 'r') as file:
-                lines = file.readlines()
-
-            # Src: https://pynative.com/python-delete-lines-from-file/
-            with open(regex_file, 'w') as file:
-                for number, line in enumerate(lines):
-                    if number not in [int(re_index)]:
-                        file.write(line)
             
-            print("Regex deleted successfully")
-            print_re(regex_file)
         elif value == "delete_all()":
             while True:
                 print("Are you sure you want to delete all Regexs? y/n: ", end="")
@@ -165,9 +162,8 @@ def test(regex_file):
                     except:
                         print("There was a problem")
                         break
+                print("Regex tested successfully")
                 print_re(regex_file)
-            print("Regex tested successfully")
-            print_re(regex_file)
         elif value == "quit()":
             break 
     print_space()

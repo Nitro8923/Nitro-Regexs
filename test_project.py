@@ -3,22 +3,14 @@
 
 import project
 import exit
-
-class Input:
-
-    def __init__(self, *args):
-        self.args = iter(args) 
-
-    def __call__(self, x):
-        try:
-            return next(self.args)
-        except StopIteration:
-            raise Exception("No more input")
+import pytest
 
 file_path = "test_data/test_files/test_regex.txt"
 
-class TestSave:
-    def test_save_function(self, capsys):
-        project.input = Input("add()")
-        project.save(file_path)
-        capsys.out.strip() == "Regex:"
+# class TestSave:
+def test_save_function(mocker, capsys):
+    mocker.patch('builtins.input', side_effect=["add()", "testing", "y"])
+    project.save(file_path)
+    stdout, stderr = capsys.readouterr()
+    print(stdout)
+
