@@ -1,5 +1,8 @@
+# Note:
+This branch is what I'll be submitting to cs50P as a Final Project. After this branch is done, it will be outdated.
+
 # Test Regexs
-A simple python program to test REGEXS. This will be my cs50P Final Project
+A simple python program to test REGEXS.
 
 # Usage
 1. Open your terminal
