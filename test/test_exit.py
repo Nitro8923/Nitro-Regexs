@@ -1,1 +1,0 @@
-# Src: https://medium.com/python-pandemonium/testing-sys-exit-with-pytest-10c6e5f7726f
