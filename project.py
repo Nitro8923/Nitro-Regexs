@@ -50,6 +50,7 @@ def save(regex_file):
             while True:
                 new_re = input("Regex: ")
                 if new_re == "quit()":
+                    break1 = True
                     break
                 while True:
                     confirmation = input("Are you sure you want to add this Regex? y/n: ")
@@ -57,7 +58,10 @@ def save(regex_file):
                         break
                 if confirmation.lower() == "y":
                     break
-            
+
+            if break1 == True:
+                break1 = False
+                break
             with open(regex_file, "a") as file:
                 file.write(f"{new_re}\n")
             
