@@ -19,7 +19,7 @@ Regexs currently loaded:
 [4] baz
 
 $ 
-Regex index:
+Regex index: 
 Are you sure you want to delete this Regex? y/n: 
 Regex deleted successfully
 Regexs currently loaded:

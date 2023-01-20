@@ -13,10 +13,11 @@ Type delete_all() to delete all Regexs
 
 Regexs currently loaded:
 [0] testing
-[1] foo
-[2] bar
-[3] baz
+[1] testing1
+[2] foo
+[3] bar
+[4] baz
 
 $ 
 Are you sure you want to delete all Regexs? y/n: 
-$
+$ 
