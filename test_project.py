@@ -26,12 +26,12 @@ def add_regex(file_path, regex):
     with open(file_path, "a") as file:
         file.write(f"{regex}\n")
 
-def add_regexs_normal(file_path):
+def add_regexes_normal(file_path):
     clear_test_file(file_path)
     for i in [r"testing", r"testing1", r"foo", r"bar", r"baz"]:
         add_regex(file_path, i)
 
-def add_regexs_test(file_path):
+def add_regexes_test(file_path):
     clear_test_file(file_path)
     for i in [r"\w+", r".*", r"\w\w\d"]:
         add_regex(file_path, i)
@@ -62,7 +62,7 @@ class TestUnits:
             ["delete_all()", "n"],
         ]
         for i in range(len(side_effects)):
-            add_regexs_normal(file_path)
+            add_regexes_normal(file_path)
             try:
                 mocker.patch("builtins.input", side_effect=side_effects[i])
                 project.delete(file_path)
@@ -73,7 +73,7 @@ class TestUnits:
     
 
     def test_delete_all(self, mocker):
-        add_regexs_normal(file_path)
+        add_regexes_normal(file_path)
         try:
             mocker.patch("builtins.input", side_effect=["delete_all()", "y"])
             project.delete(file_path)
@@ -94,7 +94,7 @@ class TestUnits:
             ["test()", "2", "hh3", "hhd", "quit()", "quit()"]
         ]
         for i in range(len(side_effects)):
-            add_regexs_test(file_path)
+            add_regexes_test(file_path)
             try:
                 mocker.patch("builtins.input", side_effect=side_effects[i])
                 project.test(file_path)
@@ -104,7 +104,7 @@ class TestUnits:
         clear_test_file(file_path)
 
     def test_change(self, mocker):
-        add_regexs_normal("test_data/test_files/test_regex1.txt")
+        add_regexes_normal("test_data/test_files/test_regex1.txt")
         add_regex("test_data/test_files/test_regex1.txt", "test")
         try:
             mocker.patch("builtins.input", side_effect=["test_data/test_files/test_regex1.txt"])
