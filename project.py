@@ -133,8 +133,10 @@ def test(regex_file):
                     lines = file.readlines()
 
                 # Src: https://stackoverflow.com/questions/6930982/how-to-use-a-variable-inside-a-regular-expression
-                re_string = lines[int(re_index)].replace("\n", "")
-                
+                try:
+                    re_string = lines[int(re_index)].replace("\n", "")
+                except IndexError:
+                    continue
                 while True:
                     print(f"Your current Regex: {re_string}")
                     value = input("Input: ")
