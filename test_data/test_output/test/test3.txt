@@ -10,7 +10,7 @@ You are in the Test Function.
 Type quit() at anytime to go back to the menu.
 Type test() to test a Regex.
 
-Regexs currently loaded:
+Regexes currently loaded:
 [0] \w+
 [1] .*
 [2] \w\w\d
@@ -21,7 +21,7 @@ Type quit() to break out of this loop!
 Your current Regex: .*
 Input: 
 Regex tested successfully
-Regexs currently loaded:
+Regexes currently loaded:
 [0] \w+
 [1] .*
 [2] \w\w\d

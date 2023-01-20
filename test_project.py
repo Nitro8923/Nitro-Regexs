@@ -131,7 +131,7 @@ class TestIntegration:
             pass
 
         with open(file_path) as file:
-            if not file.read() == "testing\nfoo\nbar":
+            if not file.read() == "testing\nfoo\nbar\n":
                 clear_test_file(file_path)
                 raise AssertionError
         
@@ -142,7 +142,7 @@ class TestIntegration:
             pass
 
         with open(file_path) as file:
-            if not file.read() == "foo":
+            if not file.read() == "foo\n":
                 clear_test_file(file_path)
                 raise AssertionError
 

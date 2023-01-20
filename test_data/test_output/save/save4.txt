@@ -10,13 +10,13 @@ You are in the Save Function.
 Type quit() at anytime to go back to the menu.
 Type add() to add a Regex.
 
-Regexs currently loaded:
+Regexes currently loaded:
 
 $ 
 Regex: 
 Are you sure you want to add this Regex? y/n: 
 Regex added successfully
-Regexs currently loaded:
+Regexes currently loaded:
 [0] testing
 
 $ 

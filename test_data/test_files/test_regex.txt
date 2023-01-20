@@ -1,5 +1,0 @@
-testing
-testing1
-foo
-bar
-baz

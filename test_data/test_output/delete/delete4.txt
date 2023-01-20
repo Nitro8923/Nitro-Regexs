@@ -9,9 +9,9 @@
 You are in the Delete Function.
 Type quit() at anytime to go back to the menu.
 Type delete() to delete a Regex.
-Type delete_all() to delete all Regexs
+Type delete_all() to delete all Regexes
 
-Regexs currently loaded:
+Regexes currently loaded:
 [0] testing
 [1] testing1
 [2] foo
@@ -22,7 +22,7 @@ $
 Regex index: 
 Are you sure you want to delete this Regex? y/n: 
 Regex deleted successfully
-Regexs currently loaded:
+Regexes currently loaded:
 [0] testing
 [1] foo
 [2] bar
