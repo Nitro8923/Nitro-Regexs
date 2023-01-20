@@ -1,1 +1,1 @@
-test_data/test_files/test_regex.txt
+regex_data/regex.txt

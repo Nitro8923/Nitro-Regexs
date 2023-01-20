@@ -1,0 +1,36 @@
+ _______        _   
+|__   __|      | |  
+   | | ___  ___| |_ 
+   | |/ _ \/ __| __|
+   | |  __/\__ \ |_ 
+   |_|\___||___/\__|
+                    
+                    
+You are in the Test Function.
+Type quit() at anytime to go back to the menu.
+Type test() to test a Regex.
+
+Regexs currently loaded:
+[0] \w+
+[1] .*
+[2] \w\w\d
+
+$ 
+Regex index: 
+Type quit() to break out of this loop!
+Your current Regex: \w+
+Input: 
+True
+Your current Regex: \w+
+Input: 
+False
+Your current Regex: \w+
+Input: 
+Regex tested successfully
+Regexs currently loaded:
+[0] \w+
+[1] .*
+[2] \w\w\d
+
+Regex index: 
+$ 
