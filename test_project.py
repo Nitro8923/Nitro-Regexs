@@ -33,38 +33,12 @@ def add_regex(regex, mocker):
 class TestSave:
     def test_save(self, mocker, capsys):
         clear_test_file()
+        side_effects = [[], ["add()"], ["add()", "testing", "n"], ["add()", "quit()"], ["add()", "testing", "y"]]
+        for i in range(len(side_effects)):
             try:
+                mocker.patch('builtins.input', side_effect=side_effects[i])
                 project.save(file_path)
             except:
                 pass
-            assert get_output(capsys) == read_file(f"{test_output_path}save/save0.txt")
-
-        try:
-            mocker.patch('builtins.input', side_effect=["add()"])
-            project.save(file_path)
-        except:
-            pass
-        assert get_output(capsys) == read_file(f"{test_output_path}save/save1.txt")
-
-        try:
-            mocker.patch('builtins.input', side_effect=["add()", "testing", "n"])
-            project.save(file_path)
-        except:
-            pass
-        assert get_output(capsys) == read_file(f"{test_output_path}save/save2.txt")
-
-        try:
-            mocker.patch('builtins.input', side_effect=["add()", "quit()"])
-            project.save(file_path)
-        except:
-            pass
-        assert get_output(capsys) == read_file(f"{test_output_path}save/save3.txt")
-
-        try:
-            mocker.patch('builtins.input', side_effect=["add()", "testing", "y"])
-            project.save(file_path)
-        except:
-            pass
-        assert get_output(capsys) == read_file(f"{test_output_path}save/save4.txt")
-
+            assert get_output(capsys) == read_file(f"{test_output_path}save/save{i}.txt")
         clear_test_file()
