@@ -21,17 +21,20 @@ def clear_test_file():
     with open("test_data/test_files/test_regex.txt", "w") as file:
         file.write("")
 
-# todo
-def add_regexs(file_path, regex):
-
+# todo    
+def add_regex(file_path, regex):
+    with open(file_path, "a") as file:
+        file.write(f"{regex}\n")
 
 def add_regexs_delete(file_path):
     clear_test_file()
-    with open(file_path, "a") as file:
-        for i in ["testing", "testing1", "foo", "bar", "baz"]:
-            file.write(f"{i}\n")
+    for i in ["testing", "testing1", "foo", "bar", "baz"]:
+        add_regex(i)
 
-def add_regexs_test(file_path)
+def add_regexs_test(file_path):
+    clear_test_file()
+    for i in ["\w+", ".*", "\w\w\d"]:
+        add_regex(i)
 
 
 # Unit Tests
