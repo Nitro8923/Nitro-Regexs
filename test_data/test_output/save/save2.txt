@@ -1,0 +1,18 @@
+  _____                 
+ / ____|                
+| (___   __ ___   _____ 
+ \___ \ / _` \ \ / / _ \
+ ____) | (_| |\ V /  __/
+|_____/ \__,_| \_/ \___|
+                        
+                        
+You are in the Save Function.
+Type quit() at anytime to go back to the menu.
+Type add() to add a Regex.
+
+Regexs currently loaded:
+
+$ 
+Regex: 
+Are you sure you want to add this Regex? y/n: 
+Regex: 

@@ -1,0 +1,22 @@
+ _____       _      _       
+|  __ \     | |    | |      
+| |  | | ___| | ___| |_ ___ 
+| |  | |/ _ \ |/ _ \ __/ _ \
+| |__| |  __/ |  __/ ||  __/
+|_____/ \___|_|\___|\__\___|
+                            
+                            
+You are in the Delete Function.
+Type quit() at anytime to go back to the menu.
+Type delete() to delete a Regex.
+Type delete_all() to delete all Regexs
+
+Regexs currently loaded:
+[0] testing
+[1] foo
+[2] bar
+[3] baz
+
+$ 
+Are you sure you want to delete all Regexs? y/n: 
+$

@@ -174,7 +174,7 @@ def change(regex_file):
     print(figlet.renderText("Change File"), end="")
     # https://www.simplilearn.com/tutorials/python-tutorial/global-variable-in-python#:~:text=Use%20a%20global%20keyword%20to%20change%20the%20value,global%20variable%20inside%20the%20function.
     while True:
-        print("Path to new file", end="")
+        print("Path to new file: ", end="")
         regex_file = input()
         if test_file(regex_file):
             break
