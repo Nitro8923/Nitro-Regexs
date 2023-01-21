@@ -1,5 +1,5 @@
-# Test Regexs
-A simple python program to test REGEXS.
+# Test Regexes
+A simple python program to test REGEXES.
 
 # Usage
 1. Open your terminal

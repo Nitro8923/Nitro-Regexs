@@ -10,8 +10,8 @@ When you run python3 re_search.py, or python re_search.py, you will be brought t
                             
                             
         [1] Save New Regex
-        [2] Delete Regexs
-        [3] Test Regexs
+        [2] Delete Regexes
+        [3] Test Regexes
         [4] Change File
         [5] Help
         [6] Quit
@@ -20,8 +20,8 @@ When you run python3 re_search.py, or python re_search.py, you will be brought t
 Type one of the numbers specified and press enter. You whisked away to one of the 5 pages.
 They are:
     1. Save New Regex
-    2. Delete Regexs
-    3. Test Regexs
+    2. Delete Regexes
+    3. Test Regexes
     4. Change File
     5. Help
 
@@ -40,11 +40,11 @@ You will be at this page:
     Type quit() at anytime to go back to the menu.
     Type add() to add a Regex.
 
-    Regexs currently loaded:
+    Regexes currently loaded:
 
     $ 
 
-In this page you can save your regexs (or regular expressions)
+In this page you can save your regexes (or regular expressions)
 Type add() and press enter to see this:
 
     Regex: 
@@ -62,7 +62,7 @@ where you can enter your regex again.
 If you typed in y and pressed enter, you will see this:
 
     Regex added successfully
-    Regexs currently loaded:
+    Regexes currently loaded:
     [0] testing
 
 as testing being your regex.
@@ -84,8 +84,8 @@ Where you can type quit() and press enter again to get back to the menu.
                             
                             
         [1] Save New Regex
-        [2] Delete Regexs
-        [3] Test Regexs
+        [2] Delete Regexes
+        [3] Test Regexes
         [4] Change File
         [5] Help
         [6] Quit
@@ -105,20 +105,20 @@ you will see this page:
     You are in the Delete Function.
     Type quit() at anytime to go back to the menu.
     Type delete() to delete a Regex.
-    Type delete_all() to delete all Regexs
+    Type delete_all() to delete all Regexes
 
-    Regexs currently loaded:
+    Regexes currently loaded:
     [0] testing
     [1] .*
 
     $ 
     
-as under the Regexs currently loaded: are your regexs.
+as under the Regexes currently loaded: are your regexes.
 To delete a regex, type delete() and press enter. Then, you will see this:
 
     Regex index: 
 
-This referrs to the numbers beside the regexs.
+This referrs to the numbers beside the regexes.
 For e.g. 
     [0] testing
 enter 0 to delete testing.
@@ -134,13 +134,13 @@ if you entered n, you can go back to entering your regex index,
 but if you entered y, you will see this:
 
     Regex deleted successfully
-    Regexs currently loaded:
+    Regexes currently loaded:
     [0] .*
 
     $
-Under Regexs currently loaded:, your regex that you deleted will be gone
-You can now delete more regexs
-if you enter delete_all(), you will see a confirmation message. If you accept that, akk your regexs will be deleted
+Under Regexes currently loaded:, your regex that you deleted will be gone
+You can now delete more regexes
+if you enter delete_all(), you will see a confirmation message. If you accept that, akk your regexes will be deleted
 
 
 If you enter quit(),
@@ -155,8 +155,8 @@ you will go back to the menu.
                             
                             
         [1] Save New Regex
-        [2] Delete Regexs
-        [3] Test Regexs
+        [2] Delete Regexes
+        [3] Test Regexes
         [4] Change File
         [5] Help
         [6] Quit
@@ -177,14 +177,14 @@ you will see this:
     Type quit() at anytime to go back to the menu.
     Type test() to test a Regex.
 
-    Regexs currently loaded:
+    Regexes currently loaded:
     [0] testing
     [1] \w*
 
     $ 
 
-as under Regexs currently loaded:
-there are your regexs
+as under Regexes currently loaded:
+there are your regexes
 
 if you enter test()
 you will be prompted with a regex index.
@@ -206,7 +206,7 @@ if you enter quit() again,
 you will see this:
 
     Regex tested successfully
-    Regexs currently loaded:
+    Regexes currently loaded:
     [0] testing
     [1] \w*
 
@@ -224,10 +224,10 @@ if you enter 4 you will see this:
                               |___/                        
     Path to new file: 
 
-The re files are stored in the re folder. in the re folder, you can see re.txt with your regexs.
+The re files are stored in the re folder. in the re folder, you can see re.txt with your regexes.
 you can edit re.txt manually to get regexes as well.
 
-You can make a new file or import a .txt file with regexs in rows, where each regex is a line.
+You can make a new file or import a .txt file with regexes in rows, where each regex is a line.
 Enter in the path to your new file and you will get back to the menu.
 
 IMPORTANT: If you import another file other than a txt file, your program will crash everytime you run it. To fix the file error, go to file.txt in the main directory

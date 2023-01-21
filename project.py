@@ -17,7 +17,7 @@ def main():
     while True:
         figlet = Figlet(font='big')
         print(figlet.renderText("Menu"), end="")
-        print("    [1] Save New Regex\n    [2] Delete Regexs\n    [3] Test Regexs\n    [4] Change File\n    [5] Help\n    [6] Quit")
+        print("    [1] Save New Regex\n    [2] Delete Regexes\n    [3] Test Regexes\n    [4] Change File\n    [5] Help\n    [6] Quit")
         
         
         
@@ -70,7 +70,7 @@ def delete(regex_file):
     print_space()
     figlet = Figlet(font='big')
     print(figlet.renderText("Delete"), end="")
-    print("You are in the Delete Function.\nType quit() at anytime to go back to the menu.\nType delete() to delete a Regex.\nType delete_all() to delete all Regexs\n")
+    print("You are in the Delete Function.\nType quit() at anytime to go back to the menu.\nType delete() to delete a Regex.\nType delete_all() to delete all Regexes\n")
     print_re(regex_file)
     while True:
         value = input("$ ")
@@ -101,7 +101,7 @@ def delete(regex_file):
                     break
         elif value == "delete_all()":
             while True:
-                confirmation = input("Are you sure you want to delete all Regexs? y/n: ")
+                confirmation = input("Are you sure you want to delete all Regexes? y/n: ")
                 if confirmation.lower() == "y" or confirmation.lower() == "n":
                     break
             if confirmation.lower() == "y":
@@ -185,7 +185,7 @@ def help():
     print_space()
 
 def print_re(regex_file):
-    print("Regexs currently loaded:")
+    print("Regexes currently loaded:")
     list = []
     with open(regex_file, "r") as file:
         reader = file.readlines()
