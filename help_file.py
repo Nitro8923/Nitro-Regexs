@@ -14,7 +14,7 @@ def get_latest_help_file():
         try:
             file1 = float(file1)
         except:
-            # exit.exit("Server Naming Error", 1)
+            exit.exit("Server Naming Error", 1)
             pass
         list.append(file1)
     return f"help/help_v{str(max(list)).replace('.', '-')}.txt"

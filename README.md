@@ -1,4 +1,4 @@
-# Test Regexes
+# Nitro Regexes
 A simple python program to test REGEXES.
 
 # Usage
