@@ -21,7 +21,6 @@ def clear_test_file(file_path):
     with open(file_path, "w") as file:
         file.write("")
 
-# todo    
 def add_regex(file_path, regex):
     with open(file_path, "a") as file:
         file.write(f"{regex}\n")

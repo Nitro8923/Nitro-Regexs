@@ -6,15 +6,13 @@ def get_latest_help_file():
     list = []
     for file in folder:
         file1 = file.name
-        if file1 == "help_file.txt":
-            continue
 
         file1 = file1.replace("help_v", "").replace(".txt", "").replace("-", ".")
 
         try:
             file1 = float(file1)
         except:
-            # exit.exit("Server Naming Error", 1)
+            exit.exit("Server Naming Error", 1)
             pass
         list.append(file1)
     return f"help/help_v{str(max(list)).replace('.', '-')}.txt"
